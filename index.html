@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "style.css">
+    <title>Play the game</title>
+</head>
+<body>
+    <h1>PLAY THE GUESS GAME!</h1> <br>
+
+    <button onclick="enterNum()">Click me!!</button> <br>
+
+    <div class="container">
+    <h3>Press the button</h3>
+    <span class="material-symbols-outlined">
+        pan_tool_alt
+        </span>
+        
+    </div>
+    
+
+    <p id = "input1" class = "input"></p>
+    <p id = "input2" class = "input"></p>
+    <p id = "input3" class = "input"></p>
+    <p id = "input4" class = "input"></p>
+    <p id = "input5" class = "input"></p>
+
+    <p id = "output1" class = "output"></p>
+    <p id = "output2" class="output"></p>
+
+    <script>
+
+       function enterNum(){
+        var num =  prompt("Enter your Number")
+
+       if ( (num >= 1) && (num<=100)){
+        a = Math.floor((Math.random()*100)+1)
+        b = Math.floor((Math.random()*100)+1)
+        c = Math.floor((Math.random()*100)+1)
+        d = Math.floor((Math.random()*100)+1)
+        e = Math.floor((Math.random()*100)+1)
+        
+
+        document.getElementById("input1").innerHTML= ("The computer guessed" + " "+ a )
+        document.getElementById("input2").innerHTML= ("The computer guessed" + " "+ b )
+        document.getElementById("input3").innerHTML= ("The computer guessed" + " "+ c )
+        document.getElementById("input4").innerHTML= ("The computer guessed" + " "+ d )
+        document.getElementById("input5").innerHTML= ("The computer guessed" + " "+ e )
+        
+
+    if ((num == a) || (num == b) || (num == c) || (num == d) || (num == e)){
+        document.getElementById("output1").innerHTML=("COMPUTER WINS!! Your Number = " + num)
+        } 
+    else {
+
+        document.getElementById("output2").innerHTML=("YOU WIN!!")
+        }
+    }
+
+    else {
+        alert("Wrong Input!")
+    }
+
+       }
+
+
+
+       </script>
+</body>
+</html>
